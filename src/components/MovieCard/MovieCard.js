@@ -55,9 +55,10 @@ const MovieCard = (props) => {
         }}
       >
                 {props.movies.map((movie, index) => (
-                    <Card key ={index} onClick={()=>{OpenMovie(movie)}}  sx={{ width: 200, height: 300, display:'flex', flexDirection:'row'}}>
+                    <Card key ={index}   sx={{ width: 200, height: 300, display:'flex', flexDirection:'row'}}>
                         <CardActionArea>
                             <CardMedia
+                            onClick={()=>{OpenMovie(movie)}}
                                 component="img"
                                 height="200"
                                 image={movie.posterurl}
